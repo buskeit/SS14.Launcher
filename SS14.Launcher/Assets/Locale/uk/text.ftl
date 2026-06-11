@@ -206,7 +206,7 @@ login-login-busy-logging-in = Вхід…
 # Strings for the "login" view on login
 login-login-error-title = Не вдалося увійти
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the "hub settings" dialog window.
@@ -274,7 +274,7 @@ main-window-out-of-date-download-manual = Завантажити (вручну)
 # Strings for the general main window layout of the launcher
 main-window-early-access-title = Стережися!
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 все ще перебуває на стадії альфа-версії. Ми сподіваємося, що вам сподобається те, що ви побачите, і, можливо, ви навіть залишитеся тут, але не забувайте поки що зберігати свої очікування скромними.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for the general main window layout of the launcher
 main-window-early-access-accept = Зрозуміло!
 # Strings for the general main window layout of the launcher

@@ -4,7 +4,6 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
 using Avalonia.Platform.Storage;
-using SS14.Launcher.Localization;
 using SS14.Launcher.ViewModels;
 using TerraFX.Interop.Windows;
 using IDataObject = Avalonia.Input.IDataObject;
@@ -42,7 +41,7 @@ public partial class MainWindow : Window
 
     private void ReloadTitle()
     {
-        Title = LocalizationManager.Instance.GetString("main-window-title");
+        Title = BrandingConstants.ProductName;
     }
 
     protected override void OnDataContextChanged(EventArgs e)

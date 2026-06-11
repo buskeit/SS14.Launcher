@@ -9,7 +9,7 @@ namespace SS14.Launcher;
 /// </summary>
 public static class LauncherPaths
 {
-    public static readonly string AppDataPath = Path.Combine("Space Station 14", GetAppDataName());
+    public static readonly string AppDataPath = GetAppDataName();
     public static readonly string EngineInstallationsDirName = "engines";
     public static readonly string EngineModulesDirName = "modules";
     public static readonly string ServerContentDirName = "server content";
@@ -93,10 +93,14 @@ public static class LauncherPaths
 
     private static string GetAppDataName()
     {
+        var finalFrontierEnvVar = Environment.GetEnvironmentVariable(BrandingConstants.AppDataEnvironmentVariable);
+        if (!string.IsNullOrEmpty(finalFrontierEnvVar))
+            return finalFrontierEnvVar;
+
         var envVar = Environment.GetEnvironmentVariable("SS14_LAUNCHER_APPDATA_NAME");
         if (!string.IsNullOrEmpty(envVar))
             return envVar;
 
-        return "launcher";
+        return BrandingConstants.AppDataName;
     }
 }

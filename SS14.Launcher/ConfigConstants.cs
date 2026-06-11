@@ -20,7 +20,7 @@ public static class ConfigConstants
     // Check the command queue this often.
     public static readonly TimeSpan CommandQueueCheckInterval = TimeSpan.FromSeconds(1);
 
-    public const string LauncherCommandsNamedPipeName = "SS14.Launcher.CommandPipe";
+    public const string LauncherCommandsNamedPipeName = "FinalFrontierLauncher.CommandPipe";
     // Amount of time to wait before the launcher decides to ignore named pipes entirely to keep the rest of the launcher functional.
     public const int LauncherCommandsNamedPipeTimeout = 150;
     // Amount of time to wait to let a redialling client properly die
@@ -30,12 +30,12 @@ public static class ConfigConstants
 
     public static readonly UrlFallbackSet AuthUrl = new(["https://auth.spacestation14.com/", "https://auth.fallback.spacestation14.com/"], StatsHubInfra);
     public static readonly UrlFallbackSet[] DefaultHubUrls = [new(["https://hub.spacestation14.com/", "https://hub.fallback.spacestation14.com/"], StatsHubInfra)];
-    public const string DiscordUrl = "https://discord.ss14.io/";
+    public const string DiscordUrl = BrandingConstants.DiscordUrl;
     public const string AccountBaseUrl = "https://account.spacestation14.com/Identity/Account/";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
     public const string AccountRegisterUrl = $"{AccountBaseUrl}Register";
     public const string AccountResendConfirmationUrl = $"{AccountBaseUrl}ResendEmailConfirmation";
-    public const string WebsiteUrl = "https://spacestation14.com";
+    public const string WebsiteUrl = BrandingConstants.WikiUrl;
     public const string DownloadUrl = "https://spacestation14.com/about/nightlies/";
     public const string NewsFeedUrl = "https://spacestation14.com/post/index.xml";
     public const string TranslateUrl = "https://docs.spacestation14.com/en/general-development/contributing-translations.html";

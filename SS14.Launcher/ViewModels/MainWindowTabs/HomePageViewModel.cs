@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
@@ -22,13 +21,19 @@ public class HomePageViewModel : MainWindowTabViewModel
     public MainWindowViewModel MainWindowViewModel { get; }
     private readonly DataManager _cfg;
     private readonly ServerStatusCache _statusCache = new ServerStatusCache();
-    private readonly ServerListCache _serverListCache;
+    private readonly ServerStatusData _primaryServerStatus;
 
     public HomePageViewModel(MainWindowViewModel mainWindowViewModel)
     {
         MainWindowViewModel = mainWindowViewModel;
         _cfg = Locator.Current.GetRequiredService<DataManager>();
-        _serverListCache = Locator.Current.GetRequiredService<ServerListCache>();
+
+        _primaryServerStatus = _statusCache.GetStatusFor(BrandingConstants.PrimaryServerAddress);
+        PrimaryServers.Add(new ServerEntryViewModel(
+            MainWindowViewModel,
+            new ServerStatusDataWithFallbackName(_primaryServerStatus, BrandingConstants.PrimaryServerName),
+            _statusCache,
+            _cfg));
 
         _cfg.FavoriteServers
             .Connect()
@@ -57,8 +62,8 @@ public class HomePageViewModel : MainWindowTabViewModel
         Favorites = favorites;
     }
 
+    public ObservableCollection<ServerEntryViewModel> PrimaryServers { get; } = new();
     public ReadOnlyObservableCollection<ServerEntryViewModel> Favorites { get; }
-    public ObservableCollection<ServerEntryViewModel> Suggestions { get; } = new();
 
     [Reactive] public bool FavoritesEmpty { get; private set; } = true;
 
@@ -111,15 +116,15 @@ public class HomePageViewModel : MainWindowTabViewModel
     public void RefreshPressed()
     {
         _statusCache.Refresh();
-        _serverListCache.RequestRefresh();
     }
 
     public override void Selected()
     {
+        _statusCache.InitialUpdateStatus(_primaryServerStatus);
+
         foreach (var favorite in Favorites)
         {
             _statusCache.InitialUpdateStatus(favorite.CacheData);
         }
-        _serverListCache.RequestInitialUpdate();
     }
 }

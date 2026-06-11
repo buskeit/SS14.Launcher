@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Messaging;
+using Serilog;
 using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.ServerStatus;
@@ -57,6 +58,7 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
 
     public void ConnectPressed()
     {
+        Log.Information("Selected server {ServerName} at {ServerAddress}", Name, Address);
         ConnectingViewModel.StartConnect(_windowVm, Address);
     }
 

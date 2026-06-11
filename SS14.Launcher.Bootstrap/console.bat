@@ -1,3 +1,3 @@
-"Space Station 14 Launcher.exe" --debug
+"Final Frontier Launcher.exe" --debug
 
 PAUSE

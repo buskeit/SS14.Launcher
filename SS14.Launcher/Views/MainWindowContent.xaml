@@ -21,10 +21,17 @@
         </Panel.Background>
 
         <DockPanel Name="HeaderPanel" Classes="MainWindowHeader">
-          <!-- Logo -->
-          <Image DockPanel.Dock="Left" HorizontalAlignment="Left" Height="60" Margin="0, 0, 0, 8"
-                 Source="{DynamicResource LogoLong}" />
-          <!--<v:Logo DockPanel.Dock="Left" Height="60" HorizontalAlignment="Left" Margin="0, 8"></v:Logo>-->
+          <!-- Final Frontier wordmark -->
+          <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" VerticalAlignment="Center" Margin="10, 4, 0, 8">
+            <Border Width="52" Height="52" Background="#D84B4B" CornerRadius="4">
+              <TextBlock Text="FF" Foreground="White" FontWeight="Bold" FontSize="25"
+                         HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10, 0, 0, 0">
+              <TextBlock Text="FINAL FRONTIER" Foreground="White" FontWeight="Bold" FontSize="22" />
+              <TextBlock Text="LAUNCHER" Foreground="#B8B8BE" FontSize="12" />
+            </StackPanel>
+          </StackPanel>
           <Grid DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Center"
                 ColumnDefinitions="Auto, Auto" RowDefinitions="Auto, Auto" Margin="0, 0, 3, 0">
             <!-- Discord link -->
@@ -35,8 +42,8 @@
                            Content="{loc:Loc main-window-header-link-discord}" />
             </Button>
 
-            <!-- Website link -->
-            <Button Grid.Row="0" Grid.Column="1" MinWidth="90"
+            <!-- Wiki and support link -->
+            <Button Grid.Row="0" Grid.Column="1" MinWidth="120"
                     Command="{Binding OnWebsiteButtonPressed}" Classes="OpenLeft"
                     Margin="0, 6, 0, 2">
               <v:IconLabel Icon="{DynamicResource InfoIcon-web}" Content="{loc:Loc main-window-header-link-website}" />

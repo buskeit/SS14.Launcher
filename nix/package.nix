@@ -4,7 +4,6 @@
   config,
   buildDotnetModule,
   dotnetCorePackages,
-  fetchFromGitHub,
   iconConvTools,
   copyDesktopItems,
   makeDesktopItem,
@@ -38,7 +37,7 @@
 }:
 let
   version = "0.37.1";
-  pname = "space-station-14-launcher";
+  pname = "final-frontier-launcher";
 in
 buildDotnetModule rec {
   inherit pname;
@@ -47,13 +46,7 @@ buildDotnetModule rec {
   name = "${pname}-${version}";
 
   # A bit redundant but I don't trust this package to be maintained by anyone else.
-  src = fetchFromGitHub {
-    owner = "space-wizards";
-    repo = "SS14.Launcher";
-    tag = "v${version}";
-    hash = "sha256-83eBAT+NuwwpC30Xc5bJEs++tTYlY3akMaizQgNHOsA=";
-    fetchSubmodules = true;
-  };
+  src = lib.cleanSource ../.;
 
   buildType = "Release";
   selfContainedBuild = false;
@@ -117,7 +110,7 @@ buildDotnetModule rec {
       name = pname;
       exec = meta.mainProgram;
       icon = pname;
-      desktopName = "Space Station 14 Launcher";
+      desktopName = "Final Frontier Launcher";
       comment = meta.description;
       categories = [ "Game" ];
       startupWMClass = meta.mainProgram;
@@ -125,15 +118,15 @@ buildDotnetModule rec {
   ];
 
   postInstall = ''
-    mkdir -p $out/lib/space-station-14-launcher/loader
-    cp -r SS14.Loader/bin/${buildType}/*/*/* $out/lib/space-station-14-launcher/loader/
+    mkdir -p $out/lib/final-frontier-launcher/loader
+    cp -r SS14.Loader/bin/${buildType}/*/*/* $out/lib/final-frontier-launcher/loader/
 
-    icoFileToHiColorTheme SS14.Launcher/Assets/icon.ico space-station-14-launcher $out
+    icoFileToHiColorTheme SS14.Launcher/Assets/icon.ico final-frontier-launcher $out
   '';
 
   meta = {
-    description = "Launcher for Space Station 14, a multiplayer game about paranoia and disaster";
-    homepage = "https://spacestation14.io";
+    description = "Launcher for The Final Frontier Space Station 14 server";
+    homepage = "https://thefinalfrontier.miraheze.org/wiki/Main_Page";
     license = lib.licenses.mit;
     maintainers = [ ];
     platforms = [ "x86_64-linux" ];

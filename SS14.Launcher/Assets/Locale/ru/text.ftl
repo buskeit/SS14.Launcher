@@ -53,7 +53,7 @@ main-window-out-of-date-desc =
     Данный лаунчер устарел.
     Пожалуйста, скачайте новую версию с нашего веб-сайта.
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 всё еще в стадии альфа-версии. Мы надеемся, вам нравится, что вы видите, и, возможно, вы даже останетесь здесь, однако постарайтесь пока что придержать свои скромные ожидания.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Long region names for server tag filters (shown in tooltip)
 region-north-america-east = Северная Америка - Восток
 # Strings for the "servers" tab
@@ -224,7 +224,7 @@ login-login-busy-logging-in = Вход…
 # Strings for the "login" view on login
 login-login-error-title = Не удалось войти
 # Strings for the general main window layout of the launcher
-main-window-title = Лаунчер Space Station 14
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-website = Веб-сайт
 # Strings for the general main window layout of the launcher

@@ -113,12 +113,12 @@ login-forgot-success-title = Helyreállító email elküldve
 login-login-show-password = Jelszó Megjelenítése
 login-confirmation-confirmation-message = Kérlek ellenőrizd az email címed a fiókod megerősítéséhez. Miután megerősítetted a fiókod, kattints a bejelentkezés alatti gombra.
 login-confirmation-confirmation-title = Regisztráció megerősítése
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 main-window-header-link-website = Weboldal
 main-window-out-of-date-desc =
     Ez a Launcher elavult.
     Kérlek, töltsed le az új verziót a weboldalról.
-main-window-early-access-desc = A Space Station 14 még nagyon is alfa verziójú. Reméljük tetszik amit látsz, és talán maradni is fogsz egy darabig, de egyelőre mérsékeld az elvárásaidat.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 hub-settings-button-decrease-priority-tooltip = Prioritás csökkentése
 hub-settings-button-increase-priority-tooltip = Prioritás növelése
 main-window-early-access-accept = Értem!

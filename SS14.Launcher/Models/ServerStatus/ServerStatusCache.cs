@@ -88,6 +88,7 @@ public sealed class ServerStatusCache : IServerSource
 
             var statusAddr = UriHelper.GetServerStatusAddress(parsedAddress);
             data.Status = ServerStatusCode.FetchingStatus;
+            Log.Information("Querying server status for {ServerAddress} at {StatusAddress}", data.Address, statusAddr);
 
             ServerApi.ServerStatus status;
             try
@@ -107,14 +108,17 @@ public sealed class ServerStatusCache : IServerSource
             catch (Exception e) when (e is JsonException or HttpRequestException or InvalidDataException or IOException
                                           or SocketException)
             {
+                Log.Warning(e, "Server status query failed for {ServerAddress}", data.Address);
                 data.Status = ServerStatusCode.Offline;
                 return;
             }
 
             ApplyStatus(data, status);
+            Log.Information("Server status query succeeded for {ServerAddress}: {ServerName}", data.Address, data.Name);
         }
-        catch (OperationCanceledException)
+        catch (OperationCanceledException e)
         {
+            Log.Warning(e, "Server status query timed out or was cancelled for {ServerAddress}", data.Address);
             data.Status = ServerStatusCode.Offline;
         }
     }
@@ -167,6 +171,7 @@ public sealed class ServerStatusCache : IServerSource
         var cancel = data.InfoCancel.Token;
 
         data.StatusInfo = ServerStatusInfoCode.Fetching;
+        Log.Debug("Querying server information for {ServerAddress}", data.Address);
 
         ServerInfo info;
         try
@@ -182,16 +187,19 @@ public sealed class ServerStatusCache : IServerSource
         }
         catch (OperationCanceledException)
         {
+            Log.Warning("Server information query timed out or was cancelled for {ServerAddress}", data.Address);
             data.StatusInfo = ServerStatusInfoCode.NotFetched;
             return;
         }
         catch (Exception e) when (e is JsonException or HttpRequestException or InvalidDataException)
         {
+            Log.Warning(e, "Server information query failed for {ServerAddress}", data.Address);
             data.StatusInfo = ServerStatusInfoCode.Error;
             return;
         }
 
         data.StatusInfo = ServerStatusInfoCode.Fetched;
+        Log.Debug("Server information query succeeded for {ServerAddress}", data.Address);
         data.Description = info.Desc;
         data.Links = info.Links;
     }

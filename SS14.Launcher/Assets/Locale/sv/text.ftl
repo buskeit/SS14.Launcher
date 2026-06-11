@@ -45,7 +45,7 @@ filters-player-count-hide-full-desc = Fulla servrar visas inte
 # Strings for the "forgot password" view on login
 login-forgot-error = Fel
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 är fortfarande i alfastadiet. Vi hoppas att du gillar det du ser, kanske till och med blir kvar, men tänk på att hålla förväntningarna rimliga för nävarande.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Long region names for server tag filters (shown in tooltip)
 region-africa-central = Centralafrika
 # Strings for the "servers" tab
@@ -224,7 +224,7 @@ login-login-busy-logging-in = Loggar in…
 # Strings for the "login" view on login
 login-login-error-title = Kunde inte logga in
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the general main window layout of the launcher

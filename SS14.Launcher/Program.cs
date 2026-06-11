@@ -106,6 +106,14 @@ internal static class Program
             .WriteTo.File(LauncherPaths.PathLauncherLog, rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7, fileSizeLimitBytes: 100L * 1024 * 1024)
             .CreateLogger();
 
+        Log.Information(
+            "Starting {ProductName}. User data: {UserDataPath}; local cache: {LocalDataPath}; primary server: {PrimaryServerName} ({PrimaryServerAddress})",
+            BrandingConstants.ProductName,
+            LauncherPaths.DirUserData,
+            LauncherPaths.DirLocalData,
+            BrandingConstants.PrimaryServerName,
+            BrandingConstants.PrimaryServerAddress);
+
         LauncherDiagnostics.LogDiagnostics();
 
 #if DEBUG
@@ -134,7 +142,7 @@ internal static class Program
             return;
 
         var text =
-            "You are using an old version of Windows that is no longer supported by Space Station 14.\n\n" +
+            "You are using an old version of Windows that is no longer supported by Final Frontier Launcher.\n\n" +
             "If anything breaks, DO NOT ASK FOR HELP OR SUPPORT.";
 
         var caption = "Unsupported Windows version";
@@ -143,7 +151,7 @@ internal static class Program
 
         if (Language.UserHasLanguage("ru"))
         {
-            text = "Вы используете старую версию Windows которая больше не поддерживается Space Station 14.\n\n" +
+            text = "Вы используете старую версию Windows которая больше не поддерживается Final Frontier Launcher.\n\n" +
                    "При возникновении ошибок НЕ БУДЕТ ОКАЗАНО НИКАКОЙ ПОДДЕРЖКИ.";
 
             caption = "Неподдерживаемая версия Windows";

@@ -87,7 +87,7 @@ login-confirmation-confirmation-message = Vennligst sjekk e-posten din for å be
 login-confirmation-button-confirm = Jeg har bekreftet kontoen min
 login-confirmation-button-cancel = Avbryt
 login-confirmation-busy = Logger inn…
-main-window-title = Space Station 14 Oppstarter
+main-window-title = Final Frontier Launcher
 main-window-header-link-discord = Discord
 main-window-header-link-website = Nettside
 login-login-error-title = Kan ikke logge inn
@@ -260,7 +260,7 @@ login-forgot-error = Feil
 main-window-out-of-date-desc =
     Denne starteren er utdatert.
     Vennligst last ned en ny versjon fra vår nettside.
-main-window-early-access-desc = Space Station 14 er fortsatt i en tidlig alfa-versjon. Vi håper du liker det du ser, og kanskje til og med blir værende, men husk å holde forventningene dine moderate inntil videre.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 tab-development-title-override = { "[" }DEV (override active!!!)]
 login-confirmation-confirmation-title = Registreringsbekreftelse
 region-north-america-central = Nord-Amerika Sentral

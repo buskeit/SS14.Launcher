@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>SS14 Launcher</string>
+    <string>Final Frontier Launcher</string>
     <key>CFBundleDisplayName</key>
-    <string>Space Station 14 Launcher</string>
+    <string>Final Frontier Launcher</string>
     <key>CFBundleExecutable</key>
     <string>SS14</string>
     <key>CFBundleIdentifier</key>
-    <string>com.spacestation14.launcher</string>
+    <string>org.thefinalfrontier.launcher</string>
     <key>LSApplicationCategoryType</key>
     <string>public.app-category.games</string>
     <key>LSArchitecturePriority</key>

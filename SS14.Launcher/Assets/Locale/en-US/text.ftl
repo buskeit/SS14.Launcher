@@ -28,7 +28,7 @@ connecting-status-update-error =
     - Try connecting to another game server to see if the problem persists.
     - Try disabling or enabling software such as VPNs, if you have any.
 
-    If you are still having issues, first try contacting the server you are attempting to join before asking for support on the Official Space Station 14 Discord or Forums.
+    If you are still having issues, ask for support in the Final Frontier Discord.
 
     Technical error: { $err }
 connecting-status-update-error-no-engine-for-platform = This game is using an older version that does not support your current platform. Please try another server or try again later.
@@ -154,9 +154,9 @@ login-confirmation-busy = Logging in…
 
 ## Strings for the general main window layout of the launcher
 
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 main-window-header-link-discord = Discord
-main-window-header-link-website = Website
+main-window-header-link-website = Wiki / Support
 main-window-out-of-date = Launcher out of date
 main-window-out-of-date-desc =
     This launcher is out of date.
@@ -167,7 +167,7 @@ main-window-out-of-date-desc-steam =
 main-window-out-of-date-exit = Exit
 main-window-out-of-date-download-manual = Download (manual)
 main-window-early-access-title = Heads up!
-main-window-early-access-desc = Space Station 14 is still very much in alpha. We hope you like what you see, and maybe even stick around, but make sure to keep your expectations modest for the time being.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 main-window-early-access-accept = Got it!
 main-window-intel-degrade-title = Intel 13th/14th Generation CPU detected.
 main-window-intel-degrade-desc =
@@ -327,13 +327,14 @@ tab-development-enable-engine-override-desc = Override path to load engine zips 
 ## Strings for the "home" tab
 
 tab-home-title = Home
+tab-home-primary-server = Primary Server
 tab-home-favorite-servers = Favorite Servers
 tab-home-add-favorite = Add favorite
 tab-home-refresh = Refresh
 tab-home-direct-connect = Direct connect to server
 tab-home-run-content-bundle = Run content bundle/replay
 tab-home-go-to-servers-tab = Go to the servers tab
-tab-home-favorites-guide = Mark servers as favorite for easy access here
+tab-home-favorites-guide = Optional favorite servers appear here
 
 ## Strings for the "news" tab
 

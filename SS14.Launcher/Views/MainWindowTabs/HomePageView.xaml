@@ -15,7 +15,7 @@
   <DockPanel>
     <!-- Header controls -->
     <DockPanel DockPanel.Dock="Top" LastChildFill="False" Margin="4, 0, 4, 2">
-      <TextBlock DockPanel.Dock="Left" Text="{loc:Loc tab-home-favorite-servers}" Classes="NanoHeadingMedium" />
+      <TextBlock DockPanel.Dock="Left" Text="{loc:Loc tab-home-primary-server}" Classes="NanoHeadingMedium" />
       <Button DockPanel.Dock="Right" Classes="OpenLeft" Command="{Binding AddFavoritePressed}"
               ToolTip.Tip="{loc:Loc tab-home-add-favorite}">
         <v:IconLabel Icon="{DynamicResource ButtonIcon-plus}" Height="20" Width="20" />
@@ -38,20 +38,19 @@
 
     <Panel DockPanel.Dock="Bottom" Classes="ScrollViewerSep" />
     <Panel DockPanel.Dock="Top" Classes="ScrollViewerSep" />
-    <Panel>
-      <mwt:ServerList List="{Binding Favorites}" IsVisible="{Binding !FavoritesEmpty}">
-        <Button Content="{loc:Loc tab-home-go-to-servers-tab}"
-                Command="{Binding MainWindowViewModel.SelectTabServers}" />
-      </mwt:ServerList>
+    <Grid RowDefinitions="Auto, Auto, *">
+      <mwt:ServerList Grid.Row="0" List="{Binding PrimaryServers}" />
 
-      <StackPanel IsVisible="{Binding FavoritesEmpty}"
-                  Orientation="Vertical" VerticalAlignment="Center">
-        <TextBlock Text="{loc:Loc tab-home-favorites-guide}" HorizontalAlignment="Center"
-                   Margin="0 0 0 10" />
-        <Button Content="{loc:Loc tab-home-go-to-servers-tab}"
-                Command="{Binding MainWindowViewModel.SelectTabServers}"
-                HorizontalAlignment="Center" />
-      </StackPanel>
-    </Panel>
+      <TextBlock Grid.Row="1" Text="{loc:Loc tab-home-favorite-servers}" Classes="NanoHeadingMedium"
+                 Margin="4, 10, 4, 4" />
+
+      <Panel Grid.Row="2">
+        <mwt:ServerList List="{Binding Favorites}" IsVisible="{Binding !FavoritesEmpty}" />
+
+        <TextBlock IsVisible="{Binding FavoritesEmpty}"
+                   Text="{loc:Loc tab-home-favorites-guide}" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+      </Panel>
+    </Grid>
   </DockPanel>
 </UserControl>

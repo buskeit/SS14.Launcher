@@ -190,7 +190,7 @@ main-window-error-unknown = Tunematon virhe
 # Strings for the general main window layout of the launcher
 main-window-drag-drop-prompt = Pudota käynnistääksesi pelin
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 # Long region names for server tag filters (shown in tooltip)
 region-middle-east = Lähi-Itä
 # Long region names for server tag filters (shown in tooltip)
@@ -429,7 +429,7 @@ connecting-update-status-loading-content-bundle = Ladataan sisältöpakettia…
 # Strings for the "login" view on login
 login-login-button-resend = Lähetä sähköpostivahvistus uudelleen
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 on vielä vahvasti alpha-vaiheessa. Toivottavasti pidät näkemästäsi ja jäät seuraamme, mutta muista pitää odotuksesi kohtuullisina toistaiseksi.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for entries in the server list (including home page)
 server-entry-connect = Yhdistä
 # Strings for the "options" tab

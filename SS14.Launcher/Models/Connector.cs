@@ -73,6 +73,8 @@ public partial class Connector : ReactiveObject
 
     public async void Connect(string address, CancellationToken cancel = default)
     {
+        Log.Information("Beginning connection to selected server {ServerAddress}", address);
+
         try
         {
             await ConnectInternalAsync(address, cancel);
@@ -122,6 +124,12 @@ public partial class Connector : ReactiveObject
         Status = ConnectionStatus.Connecting;
 
         var (info, parsedAddr, infoAddr) = await GetServerInfoAsync(address, cancel);
+
+        Log.Information(
+            "Selected server build: fork {ForkId}, version {ForkVersion}, engine {EngineVersion}",
+            info.BuildInformation?.ForkId,
+            info.BuildInformation?.Version,
+            info.BuildInformation?.EngineVersion);
 
         await HandlePrivacyPolicyAsync(info, cancel);
 
@@ -306,6 +314,12 @@ public partial class Connector : ReactiveObject
     {
         Status = ConnectionStatus.StartingClient;
 
+        Log.Information(
+            "Attempting client launch for {ServerAddress} using fork {ForkId} version {ForkVersion}",
+            parsedAddr,
+            buildInfo?.ForkId,
+            buildInfo?.Version);
+
         var clientProc = await ConnectLaunchClient(launchInfo, info, buildInfo, connectAddress, parsedAddr, contentBundle);
 
         if (clientProc != null)
@@ -318,16 +332,22 @@ public partial class Connector : ReactiveObject
 
             if (!clientProc.HasExited)
             {
+                Log.Information("Client process {ProcessId} started successfully", clientProc.Id);
                 Status = ConnectionStatus.ClientRunning;
                 await waitClient;
+                ClientExitedBadly = clientProc.ExitCode != 0;
+                Log.Information("Client process {ProcessId} exited with code {ExitCode}", clientProc.Id, clientProc.ExitCode);
+                Status = ConnectionStatus.ClientExited;
                 return;
             }
 
             ClientExitedBadly = clientProc.ExitCode != 0;
+            Log.Warning("Client process {ProcessId} exited during startup with code {ExitCode}", clientProc.Id, clientProc.ExitCode);
         }
         else
         {
             ClientExitedBadly = true;
+            Log.Error("Client launch failed before a process was created");
         }
 
         Status = ConnectionStatus.ClientExited;
@@ -450,12 +470,19 @@ public partial class Connector : ReactiveObject
 
     private async Task<ContentLaunchInfo> RunUpdateAsync(ServerBuildInformation info, CancellationToken cancel)
     {
+        Log.Information(
+            "Selecting client build/update for fork {ForkId}, version {ForkVersion}, engine {EngineVersion}",
+            info.ForkId,
+            info.Version,
+            info.EngineVersion);
+
         var installation = await _updater.RunUpdateForLaunchAsync(info, cancel);
         if (installation == null)
         {
             throw new ConnectException(ConnectionStatus.UpdateError);
         }
 
+        Log.Information("Client download/update ready for fork {ForkId} version {ForkVersion}", info.ForkId, info.Version);
         return installation;
     }
 
@@ -484,6 +511,7 @@ public partial class Connector : ReactiveObject
 
         // Fetch server connect info.
         var infoAddr = UriHelper.GetServerInfoAddress(parsedAddress);
+        Log.Information("Querying server connection information at {InfoAddress}", infoAddr);
 
         try
         {
@@ -503,10 +531,12 @@ public partial class Connector : ReactiveObject
                     info.BuildInformation.ManifestDownloadUrl = new Uri(apiAddress, "download").ToString();
                 }
             }
+            Log.Information("Server connection information query succeeded for {ServerAddress}", parsedAddress);
             return (info, parsedAddress, infoAddr);
         }
         catch (Exception e) when (e is JsonException or HttpRequestException or InvalidDataException)
         {
+            Log.Warning(e, "Server connection information query failed for {ServerAddress}", parsedAddress);
             throw new ConnectException(ConnectionStatus.ConnectionFailed, e);
         }
     }

@@ -152,7 +152,7 @@ login-confirmation-button-cancel = Annuler
 # Strings for the "register confirmation" view on login
 login-confirmation-busy = Connexion…
 # Strings for the general main window layout of the launcher
-main-window-title = Launcher de Space Station 14
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the general main window layout of the launcher
@@ -205,7 +205,7 @@ login-error-account-2fa-invalid = Code d'authentification à deux facteurs inval
 # Strings for the "register confirmation" view on login
 login-confirmation-confirmation-message = Veuillez ouvrir votre courrier électronique pour vérifier votre compte. Une fois votre compte vérifié, cliquez sur le bouton ci-dessous pour vous connecter.
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 est toujours en version alpha. On espère que vous apprécierez le jeu dans son état actuel, peut-être même que vous resterez, mais gardez des attentes modestes pour l'instant.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Error messages for login
 login-error-account-account-locked = Ce compte a été verrouillé. Contactez-nous si vous pensez qu'il s'agit d'une erreur.
 # Strings for the "login expired" view on login

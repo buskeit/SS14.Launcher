@@ -114,7 +114,7 @@ login-confirmation-confirmation-message = Seiceáil do ríomhphost chun do chunt
 login-confirmation-button-confirm = Tá mo chuntas agam dearbhaithe
 login-confirmation-button-cancel = Cealaigh
 login-confirmation-busy = Ag logáil isteach…
-main-window-title = Lainseálaí Space Station 14
+main-window-title = Final Frontier Launcher
 main-window-header-link-discord = Discord
 main-window-header-link-website = Suíomh gréasáin
 main-window-out-of-date = Lainseálaí as dáta
@@ -258,7 +258,7 @@ language-selector-cancel = Cealaigh
 language-selector-help-translate = Ar mhaith leat a aistriú? Is féidir leat!
 language-selector-system-language = Teanga córais ({ $languageName })
 language-selector-language = { $languageName } ({ $englishName })
-main-window-early-access-desc = Is alfa é Space Station 14 fós go mór. Tá siúl againn gur maith leat na rudaí atá le feiceáil, agus b'fhéidir fiú fanacht thart, ach bí cinnte go bhfanann d'ionchais réasúnta faoi láthair.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 main-window-intel-degrade-desc =
     Tá sé tuigthe go ndíoghrádaíonn go buan CPUí giniúna 13ú/14ú Intel go ciúin agus go gcliseann siad mar gheall ar fhabht micreachóid le Intel. Ar an drochuair, nílimid in ann a aithint má théann an fabht i bhfeidhm ort, mar sin tá an fógra seo taispeánta do gach úsáideoir leis na CPUí seo.
 

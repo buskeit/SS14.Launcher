@@ -175,7 +175,7 @@ login-forgot-success-title = Το email επαναφοράς έχει σταλε
 # Strings for the "login" view on login
 login-login-busy-logging-in = Γίνετε σύνδεση…
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 # Long region names for server tag filters (shown in tooltip)
 region-asia-south-east = Νοτιοανατολική Ασία
 # Long region names for server tag filters (shown in tooltip)
@@ -467,7 +467,7 @@ tab-news-title = Ειδήσεις
 # Strings for the "options" tab
 tab-options-log-client = Log Παιχνίδι
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Το Space Station 14 βρίσκεται ακόμα σε στάδιο άλφα. Ελπίζουμε να σας αρέσει αυτό που βλέπετε, και ίσως να μείνετε μαζί μας, αλλά φροντίστε να διατηρήσετε τις προσδοκίες σας μέτριες προς το παρόν.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for the general main window layout of the launcher
 main-window-drag-drop-prompt = Αφήστε το αρχείο για να τρέξει το παιχνίδι
 # Short region names for server tag filters (shown in filter check box)

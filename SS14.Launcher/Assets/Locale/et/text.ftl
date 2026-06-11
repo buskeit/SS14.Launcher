@@ -192,7 +192,7 @@ login-confirmation-button-cancel = Tühista
 # Strings for the "register confirmation" view on login
 login-confirmation-busy = Sisselogimine…
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Käivitusprogramm
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the general main window layout of the launcher
@@ -486,7 +486,7 @@ tab-development-title-override = { "[" }DEV (override aktiivne!!!)]
 # Strings for the "register confirmation" view on login
 login-confirmation-confirmation-message = Palun vaadake oma e-posti aadressi, et oma konto kinnitada. Kui olete oma konto kinnitanud, vajutage sisselogimiseks allolevat nuppu.
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 on veel  alpha-staadiumis. Loodame, et teile meeldib see, mida näete, ja võib-olla isegi jätkate mängimist, kuid hoidke oma ootused esialgu tagasihoidlikena.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Long region names for server tag filters (shown in tooltip)
 region-south-america-west = Lääne-Lõuna-Ameerika
 # Strings for the "forgot password" view on login

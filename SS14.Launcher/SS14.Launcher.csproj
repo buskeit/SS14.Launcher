@@ -11,6 +11,10 @@
     <DefineConstants Condition="'$(FullRelease)' != 'True'">DEVELOPMENT;$(DefineConstants)</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoWarn>CA1416</NoWarn>
+    <AssemblyTitle>Final Frontier Launcher</AssemblyTitle>
+    <Product>Final Frontier Launcher</Product>
+    <Description>Launcher for The Final Frontier Space Station 14 server.</Description>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('FreeBSD'))">
     <UseSystemSqlite>True</UseSystemSqlite>

@@ -24,7 +24,7 @@ login-forgot-message = Se você esqueceu sua senha, você pode informar o endere
 # Strings for the general main window layout of the launcher
 main-window-early-access-title = Preste atenção!
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 ainda está em alpha. Esperamos que você goste do que ver, e até fique conosco por um tempo, mas garanta que suas expectativas para o jogo sejam moderadas por enquanto.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for the drop-down window to manage your active account
 account-drop-down-none-selected = Nenhuma conta selecionada
 # Strings for the drop-down window to manage your active account
@@ -195,7 +195,7 @@ login-login-busy-logging-in = Conectando…
 # Strings for the "login" view on login
 login-login-error-title = Falha ao conectar
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the general main window layout of the launcher

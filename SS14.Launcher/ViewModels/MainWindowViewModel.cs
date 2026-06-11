@@ -39,8 +39,6 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     [Reactive] public bool OutOfDate { get; private set; }
 
     public HomePageViewModel HomeTab { get; }
-    public ServerListTabViewModel ServersTab { get; }
-    public NewsTabViewModel NewsTab { get; }
     public OptionsTabViewModel OptionsTab { get; }
 
     public MainWindowViewModel()
@@ -51,15 +49,11 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         _infoManager = Locator.Current.GetRequiredService<LauncherInfoManager>();
         _loc = LocalizationManager.Instance;
 
-        ServersTab = new ServerListTabViewModel(this);
-        NewsTab = new NewsTabViewModel();
         HomeTab = new HomePageViewModel(this);
         OptionsTab = new OptionsTabViewModel();
 
         var tabs = new List<MainWindowTabViewModel>();
         tabs.Add(HomeTab);
-        tabs.Add(ServersTab);
-        tabs.Add(NewsTab);
         tabs.Add(OptionsTab);
 #if DEVELOPMENT
         tabs.Add(new DevelopmentTabViewModel());
@@ -222,11 +216,6 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         Cfg.SetCVar(CVars.HasDismissedRosettaWarning, true);
         Cfg.CommitConfig();
         this.RaisePropertyChanged(nameof(ShouldShowRosettaWarning));
-    }
-
-    public void SelectTabServers()
-    {
-        SelectedIndex = Tabs.IndexOf(ServersTab);
     }
 
     public void TrySwitchToAccount(LoggedInAccount account)

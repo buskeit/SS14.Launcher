@@ -1,9 +1,9 @@
-main-window-title = Space Station 14 ランチャー
+main-window-title = Final Frontier Launcher
 main-window-out-of-date-desc-steam =
     このランチャーは古いものです。
     Steamによるアップデートを許可してください。
 login-confirmation-busy = ログイン中…
-main-window-early-access-desc = Space Station 14はまだアルファ版です。私たちは、あなたが見るものを気に入り、そしてもしかしたら近くにいてくれることを願っていますが、当分の間あなたの期待は控えめにしておいてください。
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 login-expired-button-forgot-password = パスワードをお忘れですか？
 login-forgot-message = パスワードをお忘れの場合は、アカウントに関連付けられたメールアドレスをここに入力するとリセットリンクを受け取ることができます。
 main-window-busy-checking-update = ランチャーのアップデートを確認中…

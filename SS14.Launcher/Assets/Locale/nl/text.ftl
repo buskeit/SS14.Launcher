@@ -205,7 +205,7 @@ filters-18-no = Nee
 # Strings for the server filters menu
 filters-18-no-desc = Nee
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 Launcher
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the general main window layout of the launcher
@@ -227,7 +227,7 @@ main-window-out-of-date-download-manual = Download (manueel)
 # Strings for the general main window layout of the launcher
 main-window-early-access-title = Opmerking!
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 is nog steeds een alpha. We hopen dat het spel nu al leuk is en dat je hier blijft, maar zorg dat je verwachtingen niet te hoog liggen.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for the general main window layout of the launcher
 main-window-busy-checking-update = Controleren op launcher-update…
 # Strings for the general main window layout of the launcher

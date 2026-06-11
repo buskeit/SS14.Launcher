@@ -155,7 +155,7 @@ login-confirmation-button-cancel = Zrušit
 # Strings for the "register confirmation" view on login
 login-confirmation-busy = Přihlašování…
 # Strings for the general main window layout of the launcher
-main-window-title = Space Station 14 spouštěč
+main-window-title = Final Frontier Launcher
 # Strings for the general main window layout of the launcher
 main-window-header-link-discord = Discord
 # Strings for the general main window layout of the launcher
@@ -183,7 +183,7 @@ connecting-update-status-committing-download = Synchronizace na úložišti…
 # Strings for the "register confirmation" view on login
 login-confirmation-button-confirm = Účet mám potvrzený
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 je stále v alfa verzi. Doufáme, že se vám hra líbí, a že s nám i dále zůstanete. Prosíme udržujte svá očekávání momentálně skromné.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for the "connecting" menu that appears when connecting to a server.
 connecting-update-status-verifying = Verifikace integrity stažených souborů…
 # Strings for the "connecting" menu that appears when connecting to a server.

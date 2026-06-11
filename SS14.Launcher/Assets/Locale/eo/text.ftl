@@ -77,7 +77,7 @@ direct-connect-address-invalid = Malvalida adreso
 login-expired-button-log-in = Ensaluti
 login-login-title = Ensaluti
 login-login-button-log-in = Ensaluti
-main-window-title = Lanĉilo de Space Station 14
+main-window-title = Final Frontier Launcher
 main-window-header-link-website = Retejo
 connecting-update-status-ready = Ĝisdatigo kompletis!
 server-entry-connect = Konekti
@@ -183,7 +183,7 @@ tab-options-account-settings = Agordoj de Konto
 tab-options-log-client = Registri Klienton
 language-selector-label = Lingvo
 language-selector-save = Konservi
-main-window-early-access-desc = Space Station 14 estas nepre ankoraŭ en alfa fazo. Ni esperas, ke vi ŝatos kion vi vidos, kaj eble restos ĉi tie, sed tenu viajn atendojn modestajn por nun.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 main-window-drag-drop-prompt = Metu por ekruli ludon
 main-window-out-of-date-desc =
     Ĉi tiu lanĉilo estas eksdata.

@@ -99,9 +99,9 @@ public static class CVars
     public static readonly CVarDef<int> InterruptibleDownloadKeepHours = CVarDef.Create("InterruptibleDownloadKeepHours", 7 * 24);
 
     /// <summary>
-    /// Whether to display override assets (trans rights).
+    /// Whether to display remotely supplied seasonal branding assets.
     /// </summary>
-    public static readonly CVarDef<bool> OverrideAssets = CVarDef.Create("OverrideAssets", true);
+    public static readonly CVarDef<bool> OverrideAssets = CVarDef.Create("OverrideAssets", false);
 
     /// <summary>
     /// Stores the minimum player count value used by the "minimum player count" filter.

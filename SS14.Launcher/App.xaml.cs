@@ -26,7 +26,6 @@ public class App : Application
     private static readonly Dictionary<string, AssetDef> AssetDefs = new()
     {
         ["WindowIcon"] = new AssetDef("icon.ico", AssetType.WindowIcon),
-        ["LogoLong"] = new AssetDef("logo-long.png", AssetType.Bitmap),
     };
 
     private readonly OverrideAssetsManager _overrideAssets;

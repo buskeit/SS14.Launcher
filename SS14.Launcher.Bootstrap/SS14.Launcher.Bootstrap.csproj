@@ -5,8 +5,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
     <PublishAot>true</PublishAot>
-    <TargetName>Space Station 14 Launcher</TargetName>
+    <TargetName>Final Frontier Launcher</TargetName>
     <ApplicationIcon>../SS14.Launcher/Assets/icon.ico</ApplicationIcon>
+    <AssemblyTitle>Final Frontier Launcher</AssemblyTitle>
+    <Product>Final Frontier Launcher</Product>
+    <Description>Launcher for The Final Frontier Space Station 14 server.</Description>
     <LangVersion>12</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 

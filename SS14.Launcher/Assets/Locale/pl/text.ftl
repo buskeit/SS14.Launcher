@@ -275,7 +275,7 @@ main-window-out-of-date-exit = Wyjście
 # Strings for the general main window layout of the launcher
 main-window-header-link-website = Strona internetowa
 # Strings for the general main window layout of the launcher
-main-window-title = Program uruchamiający Space Station 14
+main-window-title = Final Frontier Launcher
 # Strings for the "register confirmation" view on login
 login-confirmation-busy = Logowanie…
 # Strings for the "login" view on login
@@ -435,7 +435,7 @@ login-login-button-resend = Ponownie wyślij potwierdzenie e-mail
 # Strings for the "login" view on login
 login-login-error-title = Nie można się zalogować
 # Strings for the general main window layout of the launcher
-main-window-early-access-desc = Space Station 14 wciąż znajduje się w fazie alfa. Mamy nadzieję, że spodoba Ci się to, co zobaczysz, a może nawet zostaniesz na dłużej, ale pamiętaj, by na ten moment mieć skromne oczekiwania.
+main-window-early-access-desc = Final Frontier is in active testing. Expect unfinished content and occasional issues while the server is being developed.
 # Strings for the general main window layout of the launcher
 main-window-out-of-date = Nieaktualny program uruchamiający
 # Strings for the general main window layout of the launcher
